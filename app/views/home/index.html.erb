@@ -1,0 +1,33 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <h1>App de rifas</h1>
+            <p>Aquí está el sorteo de preferencia por todo el mundo. Pide tu ticket al administrador</p>
+        </div>
+    </div>
+    <div class="row">
+        <%@tickets.each_with_index do |ticket,index|%>
+            <% if index % 10 == 0 %>
+                <div class="col-sm-1"></div>
+            <% end %>
+            
+            
+            <div class="col-sm-1 d-grid gap-2">
+            <% if can? :edit, ticket %>
+                <%= link_to ticket.id,edit_ticket_path(ticket), class: color_button(ticket)  %>
+            <% elsif can? :read, ticket %>
+                <%= link_to ticket.id,ticket, class: color_button(ticket)  %>
+            <% elsif can? :see, ticket %>
+                <button class="<%=color_button(ticket)%>">
+                    <%=ticket.id%>
+                </button>
+            <% end %>
+            </div>
+            
+            
+            <% if index % 10 == 9 %>
+                <div class="col-sm-1"></div>
+            <% end %>
+        <%end%>
+    </div>
+</div>
