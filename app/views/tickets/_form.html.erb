@@ -12,11 +12,6 @@
   <% end %>
 
   <div>
-    <%= form.label :choosen, style: "display: block" %>
-    <%= form.check_box :choosen %>
-  </div>
-
-  <div>
     <%= form.label :user_id, style: "display: block" %>
     <%= form.select :user_id, User.client.map{|u| [u.name, u.id]}, include_blank: true %>
   </div>

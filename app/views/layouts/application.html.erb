@@ -11,20 +11,7 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    
-    <% if user_signed_in? %>
-      
-      <% if current_user.admin? %>
-        <%= link_to 'Personas', users_path %>
-        <%= link_to 'Boletas', root_path %>
-      <% end %>
-       
-      <%= link_to 'Cerrar sesión', destroy_user_session_path %>
-    <% else %>
-      <%= link_to 'Iniciar sesión', new_user_session_path %>
-    <% end %>
+    <%= render partial: 'partials/navbar' %>
     
     <%= yield %>
   </body>
