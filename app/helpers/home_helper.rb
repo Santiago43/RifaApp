@@ -3,6 +3,6 @@ module HomeHelper
         if ticket.user and current_user == ticket.user
             return 'btn btn-warning'
         end
-        ticket.choosen ? 'btn btn-secondary' : 'btn btn-primary'
+        ticket.chosen ? 'btn btn-secondary' : 'btn btn-primary'
     end
 end

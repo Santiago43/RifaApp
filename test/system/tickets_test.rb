@@ -14,7 +14,7 @@ class TicketsTest < ApplicationSystemTestCase
     visit tickets_url
     click_on "New ticket"
 
-    check "Choosen" if @ticket.choosen
+    check "chosen" if @ticket.chosen
     fill_in "User", with: @ticket.user_id
     click_on "Create Ticket"
 
@@ -26,7 +26,7 @@ class TicketsTest < ApplicationSystemTestCase
     visit ticket_url(@ticket)
     click_on "Edit this ticket", match: :first
 
-    check "Choosen" if @ticket.choosen
+    check "chosen" if @ticket.chosen
     fill_in "User", with: @ticket.user_id
     click_on "Update Ticket"
 

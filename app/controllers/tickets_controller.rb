@@ -1,5 +1,5 @@
 class TicketsController < ApplicationController
-  before_action :set_ticket, only: %i[ show edit update destroy ]
+  before_action :set_ticket, only: %i[ show edit update destroy print ]
 
   # GET /tickets or /tickets.json
   def index
@@ -8,6 +8,10 @@ class TicketsController < ApplicationController
 
   # GET /tickets/1 or /tickets/1.json
   def show
+    respond_to do |format|
+      format.html
+      format.pdf 
+    end
   end
 
   # GET /tickets/new
@@ -57,6 +61,9 @@ class TicketsController < ApplicationController
     end
   end
 
+  def print
+  end
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_ticket
@@ -65,6 +72,6 @@ class TicketsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def ticket_params
-      params.require(:ticket).permit(:choosen, :user_id)
+      params.require(:ticket).permit(:chosen, :user_id)
     end
 end

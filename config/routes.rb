@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  resources :tickets
+  resources :tickets do
+    collection do
+      get ':id/print', to: 'tickets#print'
+    end
+  end
   devise_for :users, controllers: {
     #sessions: 'users/sessions'
   }

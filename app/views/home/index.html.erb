@@ -16,7 +16,7 @@
             <% if can? :edit, ticket %>
                 <%= link_to ticket.id,edit_ticket_path(ticket), class: color_button(ticket)  %>
             <% elsif can? :read, ticket %>
-                <%= link_to ticket.id,ticket, class: color_button(ticket)  %>
+                <%= link_to ticket.id,ticket_path(@ticket,format: :pdf), class: color_button(ticket)  %>
             <% elsif can? :see, ticket %>
                 <button class="<%=color_button(ticket)%>">
                     <%=ticket.id%>

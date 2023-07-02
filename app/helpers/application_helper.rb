@@ -4,4 +4,7 @@ module ApplicationHelper
         return 'active' if controller_name == 'users' and option_name == 'User'
         nil
     end   
+    def lesc(text)
+        LatexToPdf.escape_latex(text)
+    end
 end
