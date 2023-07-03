@@ -55,6 +55,8 @@ gem 'devise', '~> 4.2'
 
 gem 'cancancan'
 
+gem 'passenger', '~> 6.0', '>= 6.0.18'
+
 gem 'rails-latex', git: 'https://github.com/amagical-net/rails-latex.git', branch: 'master'
 
 group :development, :test do
