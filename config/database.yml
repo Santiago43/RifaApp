@@ -88,5 +88,4 @@ test:
 production:
   <<: *default
   database: rifa_production
-  username: rifa
   password: <%= ENV["RIFA_DATABASE_PASSWORD"] %>

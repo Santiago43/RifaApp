@@ -51,11 +51,11 @@ gem "bootsnap", require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
-gem 'devise', '~> 4.2'
+gem 'devise', '~> 4.9'
 
 gem 'cancancan'
 
-gem 'passenger', '~> 6.0', '>= 6.0.18'
+#gem 'passenger', '~> 6.0', '>= 6.0.18'
 
 gem 'rails-latex', git: 'https://github.com/amagical-net/rails-latex.git', branch: 'master'
 
