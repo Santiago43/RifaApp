@@ -1,0 +1,8 @@
+---
+es:
+  email: Correo
+  errors:
+    messages:
+      not_saved: No guardado
+  hello: Hello world
+  password: Contraseña
