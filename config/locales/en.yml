@@ -1,6 +1,15 @@
 ---
 en:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              not_found: Correo no encontrado
+  email: Correo
   errors:
     messages:
       not_saved: Not saved
   hello: Hello world
+  password: Contraseña

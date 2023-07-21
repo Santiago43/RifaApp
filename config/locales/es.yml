@@ -6,3 +6,10 @@ es:
       not_saved: No guardado
   hello: Hello world
   password: Contraseña
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              not_found: Correo no encontrado
